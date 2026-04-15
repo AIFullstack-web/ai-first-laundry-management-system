@@ -1,6 +1,10 @@
 # Mini Laundry Order Management System
 
+
 A backend-first, minimal, working laundry order management API built with **Node.js (native HTTP server)**.
+
+A backend-first, minimal, working laundry order management API built with **Node.js + Express**.
+
 
 ## Features Implemented
 
@@ -71,6 +75,7 @@ src/
 
 ### Install & Run
 ```bash
+npm install
 npm run start
 ```
 
