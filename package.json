@@ -1,0 +1,21 @@
+{
+  "name": "mini-laundry-order-management-system",
+  "version": "1.0.0",
+  "description": "Backend-first mini laundry order management system",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "lint": "node --check src/server.js"
+  },
+  "keywords": [
+    "laundry",
+    "express",
+    "order-management"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
