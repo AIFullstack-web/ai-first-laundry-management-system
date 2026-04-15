@@ -3,13 +3,20 @@
 
   "version": "1.0.1",
 
+
+  "version": "1.0.1",
+
   "version": "1.0.0",
+
 
   "description": "Backend-first mini laundry order management system",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
     "dev": "node --watch src/server.js",
+
+
+
 
     "lint": "node --check src/server.js && node --check src/app.js"
   },
@@ -20,6 +27,8 @@
   ],
   "author": "",
   "license": "MIT"
+
+
 
     "lint": "node --check src/server.js"
   },
@@ -33,5 +42,6 @@
   "dependencies": {
     "express": "^4.21.2"
   }
+
 
 }
