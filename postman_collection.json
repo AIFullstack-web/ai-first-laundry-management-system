@@ -1,0 +1,78 @@
+{
+  "info": {
+    "name": "Mini Laundry Order Management System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/health",
+          "host": ["{{baseUrl}}"],
+          "path": ["health"]
+        }
+      }
+    },
+    {
+      "name": "Create Order",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"customerName\": \"Aditi Sharma\",\n  \"phoneNumber\": \"9876543210\",\n  \"garments\": [\n    {\"type\": \"Shirt\", \"quantity\": 2},\n    {\"type\": \"Pants\", \"quantity\": 1}\n  ]\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/orders",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "orders"]
+        }
+      }
+    },
+    {
+      "name": "Get Orders",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/api/orders?status=RECEIVED",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "orders"],
+          "query": [{ "key": "status", "value": "RECEIVED" }]
+        }
+      }
+    },
+    {
+      "name": "Update Order Status",
+      "request": {
+        "method": "PATCH",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"status\": \"PROCESSING\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/orders/{{orderId}}/status",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "orders", "{{orderId}}", "status"]
+        }
+      }
+    },
+    {
+      "name": "Dashboard",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/api/dashboard",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "dashboard"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:3000" },
+    { "key": "orderId", "value": "replace-with-order-id" }
+  ]
+}
