@@ -1,6 +1,10 @@
 # Mini Laundry Order Management System
 
+
+A backend-first, minimal, working laundry order management API built with **Node.js (native HTTP server)**.
+
 A backend-first, minimal, working laundry order management API built with **Node.js + Express**.
+
 
 ## Features Implemented
 
@@ -124,6 +128,7 @@ curl http://localhost:3000/api/dashboard
   - initial scaffolding plan
   - endpoint list validation
   - README structure checklist
+  - converting the runtime to zero external dependencies for environment compatibility
 
 ### Sample prompts used
 - "Generate a minimal Express folder structure for CRUD-like order APIs with service/controller separation."
