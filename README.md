@@ -1,8 +1,16 @@
 # Mini Laundry Order Management System
 
+
 A backend-first, minimal, working laundry order management API built with **Node.js (native HTTP server)**.
 
 > No external packages are required to run this app.
+
+
+A backend-first, minimal, working laundry order management API built with **Node.js (native HTTP server)**.
+
+A backend-first, minimal, working laundry order management API built with **Node.js + Express**.
+
+
 
 ## Features Implemented
 
@@ -59,6 +67,11 @@ src/
     validateOrder.js
   models/
     orderStore.js
+
+  routes/
+    dashboardRoutes.js
+    orderRoutes.js
+
   services/
     orderService.js
 ```
@@ -70,6 +83,7 @@ src/
 
 ### Install & Run
 ```bash
+
 npm run start
 ```
 
@@ -77,6 +91,12 @@ If port `3000` is already in use, run:
 ```bash
 PORT=3001 npm run start
 ```
+
+
+npm install
+npm run start
+```
+
 
 Server starts at:
 - `http://localhost:3000`

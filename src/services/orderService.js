@@ -1,4 +1,8 @@
+
 const crypto = require('crypto');
+
+const { randomUUID } = require('crypto');
+
 const { PRICE_MAP } = require('../config/pricing');
 const { orders } = require('../models/orderStore');
 
@@ -11,6 +15,7 @@ const VALID_TRANSITIONS = {
   DELIVERED: [],
 };
 
+
 function generateOrderId() {
   if (typeof crypto.randomUUID === 'function') {
     return crypto.randomUUID();
@@ -18,6 +23,8 @@ function generateOrderId() {
 
   return crypto.randomBytes(16).toString('hex');
 }
+
+
 
 function normalizeGarmentType(type) {
   if (typeof type !== 'string') return '';
@@ -34,7 +41,11 @@ function computeTotal(garments) {
 
 function createOrder({ customerName, phoneNumber, garments }) {
   const order = {
+
     id: generateOrderId(),
+
+    id: randomUUID(),
+
     customerName: customerName.trim(),
     phoneNumber: phoneNumber.trim(),
     garments,
