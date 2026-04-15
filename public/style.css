@@ -1,0 +1,14 @@
+body { font-family: system-ui; max-width: 1200px; margin: 0 auto; padding: 20px; }
+section { margin-bottom: 40px; border: 1px solid #eee; padding: 20px; border-radius: 8px; }
+h2 { color: #333; }
+input, select, button { padding: 8px; margin: 5px; border: 1px solid #ddd; border-radius: 4px; }
+button { background: #0070f3; color: white; cursor: pointer; }
+button:hover { background: #0051cc; }
+.garment-row { display: flex; gap: 10px; margin-bottom: 10px; }
+ul { list-style: none; padding: 0; }
+li { border: 1px solid #eee; padding: 15px; margin-bottom: 10px; border-radius: 4px; }
+.status { padding: 4px 8px; border-radius: 4px; color: white; font-size: 0.8em; }
+.RECEIVED { background: orange; }
+.PROCESSING { background: blue; }
+.READY { background: green; }
+.DELIVERED { background: #28a745; }

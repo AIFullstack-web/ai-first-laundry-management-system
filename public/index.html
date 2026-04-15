@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Laundry Order Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🧺 Mini Laundry Management System</h1>
+    
+    <!-- Create Order Form -->
+    <section>
+      <h2>Create Order</h2>
+      <form id="orderForm">
+        <input type="text" id="customerName" placeholder="Customer Name" required>
+        <input type="tel" id="phoneNumber" placeholder="Phone Number" required>
+        <div id="garments">
+          <div class="garment-row">
+            <select>
+              <option>Shirt</option>
+              <option>Pants</option>
+              <option>Saree</option>
+            </select>
+            <input type="number" min="1" value="1">
+            <button type="button" class="remove">Remove</button>
+          </div>
+        </div>
+        <button type="button" id="addGarment">Add Garment</button>
+        <button type="submit">Create Order</button>
+      </form>
+    </section>
+
+    <!-- Orders List -->
+    <section>
+      <h2>Orders</h2>
+      <div>
+        <input type="text" id="filterStatus" placeholder="Status">
+        <input type="text" id="filterName" placeholder="Customer Name">
+      </div>
+      <ul id="ordersList"></ul>
+    </section>
+
+    <!-- Dashboard -->
+    <section>
+      <h2>Dashboard</h2>
+      <div id="dashboard"></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
